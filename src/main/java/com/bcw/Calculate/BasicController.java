@@ -20,6 +20,7 @@ public class BasicController {
         List<UserTable> result = userRepository.findAll();
         System.out.println(result);
         model.addAttribute("USERNAME", result);
+        System.out.println("안녕");
         return "Register.html";
     }
 }
