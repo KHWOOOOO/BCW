@@ -21,6 +21,7 @@ public class BasicController {
         System.out.println(result);
         model.addAttribute("USERNAME", result);
         System.out.println("안녕");
+        System.out.println("김민재가 수정함");
         return "Register.html";
     }
 }
