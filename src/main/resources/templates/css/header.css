@@ -1,10 +1,10 @@
-/* style.css */
+/* styles.css */
 
-/* CSS 스타일링 */
 body {
     margin: 0; /* body의 기본 margin 제거 */
     font-family: Arial, sans-serif; /* 기본 폰트 설정 */
 }
+
 .header {
     background-color: #fff; /* 배경색 흰색으로 변경 */
     color: #000; /* 글자색 검은색으로 변경 */
@@ -13,6 +13,7 @@ body {
     justify-content: space-between;
     align-items: center;
 }
+
 .menu-button {
     background-color: transparent;
     border: none;
@@ -20,6 +21,7 @@ body {
     font-size: 16px;
     cursor: pointer;
 }
+
 .logo {
     /* 로고 또는 제목의 스타일 */
     font-size: 24px;
