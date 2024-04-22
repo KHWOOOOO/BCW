@@ -27,6 +27,16 @@ public class BasicController {
         return "index.html";
     }
 
+    @GetMapping("/register")
+    String register(){
+        return "Register.html";
+    }
+
+
+    @GetMapping("/login")
+    String login(){
+        return "login.html";
+    }
 
     @GetMapping("/Register")
     String write() {
