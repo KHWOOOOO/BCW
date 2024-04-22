@@ -1,5 +1,5 @@
-<!doctype html>
-<html lang="kr" xmlns:th="http://www.thymeleaf.org">
+
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -8,7 +8,13 @@
     <title>Document</title>
 </head>
 <body>
-    <h4>메인페이지임</h4>
-    <button onclick="location.href='Register.html'">넘어가깅</button >
+    <form action="/add" method="POST">
+        <input name = "USERNAME">
+        <input name = "USERID">
+        <input name = "USEREMAIL">
+        <input name = "USERPW">
+        <button type="submit">전송</button>
+    </form>
+
 </body>
 </html>
