@@ -1,9 +1,8 @@
 package com.bcw.Calculate;
 
+import com.bcw.Calculate.member.UserRepository;
+import com.bcw.Calculate.member.UserTable;
 import lombok.RequiredArgsConstructor;
-import org.apache.catalina.User;
-import org.hibernate.cache.spi.support.AbstractReadWriteAccess;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -27,40 +26,14 @@ public class BasicController {
         return "index.html";
     }
 
-    @GetMapping("/register")
-    String register(){
-        return "Register.html";
-    }
-
-
     @GetMapping("/login")
     String login(){
         return "login.html";
     }
 
-    @GetMapping("/Register")
+    @GetMapping("/register")
     String write() {
         return "Register.html";
-    }
-
-    @PostMapping("/add")
-    String addPost(@RequestParam String USERNAME,
-                   @RequestParam String USERID,
-                   @RequestParam String USEREMAIL,
-                   @RequestParam String USERPW) {
-        System.out.println(USERNAME);
-        System.out.println(USERID);
-        System.out.println(USEREMAIL);
-        System.out.println(USERPW);
-
-        UserTable userTable = new UserTable();
-        userTable.setUSERNAME(USERNAME);
-        userTable.setUSERID(USERID);
-        userTable.setUSEREMAIL(USEREMAIL);
-        userTable.setUSERPW(USERPW);
-
-        userRepository.save(userTable);
-        return "redirect:/list";
     }
 
 }
