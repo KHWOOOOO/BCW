@@ -2,10 +2,11 @@ package com.bcw.Calculate.member;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 @Controller
-//@RequestMapping("/member")
+@RequestMapping("/member")
 @RequiredArgsConstructor
 public class MemberController {
 
@@ -20,7 +21,13 @@ public class MemberController {
     public String addPost(@RequestParam String USERNAME,
                           @RequestParam String USERID,
                           @RequestParam String USEREMAIL,
-                          @RequestParam String USERPW) {
+                          @RequestParam String USERPW,
+                          Model model) {
+
+        if (userRepository.existsByUSERNAME(USERNAME)) {
+            model.addAttribute("errorMessage", "중복되는 닉네임이 있습니다. 다시 확인해주세요.");
+            return "Register.html";  // 등록 페이지로 다시 이동
+        }
 
         UserTable userTable = new UserTable();
         userTable.setUSERNAME(USERNAME);
