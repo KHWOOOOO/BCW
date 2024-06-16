@@ -25,16 +25,16 @@ public class BaseCtl {
 
     @GetMapping("/login")
     String login() {
-        return "login";  // 확장자 없이 템플릿 이름만 리턴
+        return "member/login";  // 확장자 없이 템플릿 이름만 리턴
     }
 
     @GetMapping("/register")
     String write() {
-        return "Register";  // 확장자 없이 템플릿 이름만 리턴
+        return "member/register";  // 확장자 없이 템플릿 이름만 리턴
     }
 
     @GetMapping("/Challenge")
     String Challenge() {
-        return "Challenge";  // 확장자 없이 템플릿 이름만 리턴
+        return "member/challenge";  // 확장자 없이 템플릿 이름만 리턴
     }
 }
