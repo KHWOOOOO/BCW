@@ -42,10 +42,10 @@ public class MemberCtl {
     }
 
     @PostMapping("/userlogin")
-    public String loginPost(@RequestParam String UserId,
-                            @RequestParam String userPassWord){
-        System.out.println(UserId);
-        System.out.println(userPassWord);
+    public String loginPost(@RequestParam String userId,
+                            @RequestParam String userPw){
+        System.out.println(userId);
+        System.out.println(userPw);
 
         return "redirect:/list";
     }
