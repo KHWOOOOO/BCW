@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="ko" xmlns:th="http://www.thymeleaf.org" data-bs-theme="auto">
 <head>
-    <meta charset="UTF-8"/>
-    <title>사계공부</title>
+	<meta charset="UTF-8"/>
+	<title>사계공부</title>
 	
 	<!-- 공통 header Import -->
 	<div th:replace="base/inc_common_head :: inc_head"></div>
@@ -11,44 +11,30 @@
 </head>
 
 <body>
-<nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
-    <div class="container px-5">
-        <a class="navbar-brand" href="index.html"><span class="fw-bolder text-primary">사계 공부</span></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span
-                class="navbar-toggler-icon"></span></button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
-                <li class="nav-item"><a class="nav-link" href="solved.html">문제풀기</a></li>
-                <li class="nav-item"><a class="nav-link" href="resume.html">게임모드</a></li>
-                <li class="nav-item"><a class="nav-link" href="login.html">로그인</a></li>
-                <li class="nav-item"><a class="nav-link" href="Register.html">회원가입</a></li>
-            </ul>
-        </div>
-    </div>
-</nav>
-<hr style="width:100%;height:2px;border:none;background-color:blue;">
+<!-- Navigation-->
+<div th:insert="base/page_navigator :: p_nav"></div>
+
 <div class="container" style="margin-right: 10px;">
-    <div class="row justify-content-md-center">
-        <div class="col col-lg-6">
-            <div class="row-cols-2">
-                <a class="btn btn-outline-dark btn-lg px-5 py-3 fs-6 fw-bolder mt-5 mb-5" href="register.html">1단계</a>
-                <a class="btn btn-outline-dark btn-lg px-5 py-3 fs-6 fw-bolder mt-4 mb-5" href="register.html">2단계</a>
-                <a class="btn btn-outline-dark btn-lg px-5 py-3 fs-6 fw-bolder mt-4 mb-5" href="register.html">3단계</a>
-                <a class="btn btn-outline-dark btn-lg px-5 py-3 fs-6 fw-bolder mt-4 mb-5" href="register.html">4단계</a>
-                <a class="btn btn-outline-dark btn-lg px-5 py-3 fs-6 fw-bolder mt-4 mb-5" href="register.html">5단계</a>
-            </div>
-        </div>
-        <div class="col col-lg-6">
-            <div class="row-cols-2">
-                <a class="btn btn-outline-dark btn-lg px-5 py-3 fs-6 fw-bolder mt-5 mb-5" href="register.html">6단계</a>
-                <a class="btn btn-outline-dark btn-lg px-5 py-3 fs-6 fw-bolder mt-4 mb-5" href="register.html">7단계</a>
-                <a class="btn btn-outline-dark btn-lg px-5 py-3 fs-6 fw-bolder mt-4 mb-5" href="register.html">8단계</a>
-                <a class="btn btn-outline-dark btn-lg px-5 py-3 fs-6 fw-bolder mt-4 mb-5" href="register.html">9단계</a>
-                <a class="btn btn-outline-dark btn-lg px-5 py-3 fs-6 fw-bolder mt-4 mb-5" href="register.html">10단계</a>
-            </div>
-        </div>
-    </div>
+	<div class="row justify-content-md-center">
+		<div class="col col-lg-6">
+			<div class="row-cols-2">
+				<a class="btn btn-outline-dark btn-lg px-5 py-3 fs-6 fw-bolder mt-5 mb-5" href="register.html">1단계</a>
+				<a class="btn btn-outline-dark btn-lg px-5 py-3 fs-6 fw-bolder mt-4 mb-5" href="register.html">2단계</a>
+				<a class="btn btn-outline-dark btn-lg px-5 py-3 fs-6 fw-bolder mt-4 mb-5" href="register.html">3단계</a>
+				<a class="btn btn-outline-dark btn-lg px-5 py-3 fs-6 fw-bolder mt-4 mb-5" href="register.html">4단계</a>
+				<a class="btn btn-outline-dark btn-lg px-5 py-3 fs-6 fw-bolder mt-4 mb-5" href="register.html">5단계</a>
+			</div>
+		</div>
+		<div class="col col-lg-6">
+			<div class="row-cols-2">
+				<a class="btn btn-outline-dark btn-lg px-5 py-3 fs-6 fw-bolder mt-5 mb-5" href="register.html">6단계</a>
+				<a class="btn btn-outline-dark btn-lg px-5 py-3 fs-6 fw-bolder mt-4 mb-5" href="register.html">7단계</a>
+				<a class="btn btn-outline-dark btn-lg px-5 py-3 fs-6 fw-bolder mt-4 mb-5" href="register.html">8단계</a>
+				<a class="btn btn-outline-dark btn-lg px-5 py-3 fs-6 fw-bolder mt-4 mb-5" href="register.html">9단계</a>
+				<a class="btn btn-outline-dark btn-lg px-5 py-3 fs-6 fw-bolder mt-4 mb-5" href="register.html">10단계</a>
+			</div>
+		</div>
+	</div>
 </div>
 </body>
 </html>

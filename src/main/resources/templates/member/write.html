@@ -1,23 +1,26 @@
 <!DOCTYPE html>
 <html lang="ko" xmlns:th="http://www.thymeleaf.org" data-bs-theme="auto">
 <head>
-    <meta charset="UTF-8">
-    <title>Document</title>
+	<meta charset="UTF-8">
+	<title>Document</title>
 	
 	<!-- 공통 header Import -->
 	<div th:replace="base/inc_common_head :: inc_head"></div>
 	
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 </head>
 <body>
-    <form action="/add" method="POST">
-        <input name = "USERNAME">
-        <input name = "USERID">
-        <input name = "USEREMAIL">
-        <input name = "USERPW">
-        <button type="submit">전송</button>
-    </form>
+<!-- Navigation-->
+<div th:insert="base/page_navigator :: p_nav"></div>
+
+<form action="/add" method="POST">
+	<input name="USERNAME">
+	<input name="USERID">
+	<input name="USEREMAIL">
+	<input name="USERPW">
+	<button type="submit">전송</button>
+</form>
 
 </body>
 </html>
