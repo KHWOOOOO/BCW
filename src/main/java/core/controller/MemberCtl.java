@@ -1,5 +1,7 @@
-package com.bcw.Calculate.member;
+package core.controller;
 
+import core.model.Member;
+import core.repository.MemberRepo;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -8,9 +10,9 @@ import org.springframework.web.bind.annotation.*;
 @Controller
 @RequestMapping("/member")
 @RequiredArgsConstructor
-public class MemberController {
+public class MemberCtl {
 
-    private final UserRepository userRepository;
+    private final MemberRepo userRepository;
 
     @GetMapping("/Register")
     public String register() {
@@ -29,13 +31,13 @@ public class MemberController {
             return "Register.html";  // 등록 페이지로 다시 이동
         }
 
-        UserTable userTable = new UserTable();
-        userTable.setUSERNAME(USERNAME);
-        userTable.setUSERID(USERID);
-        userTable.setUSEREMAIL(USEREMAIL);
-        userTable.setUSERPW(USERPW);
+        Member member = new Member();
+        member.setUSERNAME(USERNAME);
+        member.setUSERID(USERID);
+        member.setUSEREMAIL(USEREMAIL);
+        member.setUSERPW(USERPW);
 
-        userRepository.save(userTable);
+        userRepository.save(member);
         return "redirect:/list";
     }
 
