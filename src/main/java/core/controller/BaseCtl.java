@@ -1,7 +1,7 @@
-package com.bcw.Calculate;
+package core.controller;
 
-import com.bcw.Calculate.member.UserRepository;
-import com.bcw.Calculate.member.UserTable;
+import core.repository.MemberRepo;
+import core.model.Member;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -11,13 +11,13 @@ import java.util.List;
 
 @Controller
 @RequiredArgsConstructor
-public class BasicController {
+public class BaseCtl {
 
-    private final UserRepository userRepository;
+    private final MemberRepo userRepository;
 
     @GetMapping("/main")
     String list(Model model) {
-        List<UserTable> result = userRepository.findAll();
+        List<Member> result = userRepository.findAll();
         System.out.println(result);
         model.addAttribute("USERNAME", result);
         return "index";  // 확장자 없이 템플릿 이름만 리턴
