@@ -1,4 +1,4 @@
-package com.bcw.Calculate;
+package com.bcw.core;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
