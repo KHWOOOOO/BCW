@@ -14,9 +14,9 @@ public class MemberCtl {
 
     private final MemberRepo userRepository;
 
-    @GetMapping("/Register")
+    @GetMapping("/register")
     public String register() {
-        return "Register.html";
+        return "register.html";
     }
 
     @PostMapping("/add")
@@ -28,7 +28,7 @@ public class MemberCtl {
 
         if (userRepository.existsByUSERNAME(USERNAME)) {
             model.addAttribute("errorMessage", "중복되는 닉네임이 있습니다. 다시 확인해주세요.");
-            return "Register.html";  // 등록 페이지로 다시 이동
+            return "register.html";  // 등록 페이지로 다시 이동
         }
 
         Member member = new Member();
