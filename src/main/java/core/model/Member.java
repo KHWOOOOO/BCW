@@ -1,14 +1,13 @@
-package com.bcw.Calculate.member;
+package core.model;
 
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
-import lombok.ToString;
 
 @Entity
 @Getter
 @Setter
-public class UserTable {
+public class Member {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     public Long id;
